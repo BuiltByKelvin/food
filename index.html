@@ -1,0 +1,1987 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chopt Creative Salad Co. - Salads, wraps, and warm bowls made from scratch daily. Explore our menu and order online."
+    />
+    <meta
+      name="keywords"
+      content="salad, healthy food, wraps, warm bowls, catering, chopt"
+    />
+    <meta name="author" content="Chopt Creative Salad Co." />
+    <title>Chopt Creative Salad Co. | Official Site</title>
+
+    <!-- ==========================================================================
+         FAVICON
+         ========================================================================== -->
+    <!-- SVG Favicon (Modern Browsers) -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23005f53'/%3E%3Ctext x='50' y='68' font-family='Montserrat, sans-serif' font-size='60' font-weight='800' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E"
+    />
+    <!-- Fallback for older browsers -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ui-avatars.com/api/?name=C&background=005f53&color=fff&size=32&font-size=0.6&bold=true"
+    />
+    <!-- Apple Touch Icon for iOS -->
+    <link
+      rel="apple-touch-icon"
+      href="https://ui-avatars.com/api/?name=C&background=005f53&color=fff&size=180&font-size=0.6&bold=true"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* ==========================================================================
+           1. CSS RESET & GLOBAL VARIABLES
+           ========================================================================== */
+      :root {
+        /* Color Palette */
+        --primary-green: #005f53;
+        --primary-green-hover: #004a41;
+        --primary-green-light: #e0f5ee;
+        --light-mint-gradient: linear-gradient(
+          135deg,
+          #e0f5ee 0%,
+          #d4f0e6 100%
+        );
+        --yellow-banner: #ffd200;
+        --yellow-banner-hover: #e6bd00;
+        --text-dark: #1a1a1a;
+        --text-light: #ffffff;
+        --text-gray: #555555;
+        --text-gray-light: #888888;
+        --bg-off-white: #fafafa;
+        --bg-white: #ffffff;
+        --gray-border: #eaeaea;
+        --gray-medium: #cccccc;
+
+        /* Typography */
+        --font-primary: "Montserrat", sans-serif;
+        --font-secondary: "Open Sans", sans-serif;
+
+        /* Layout */
+        --container-width: 1200px;
+        --header-height: 80px;
+
+        /* Transitions & Shadows */
+        --transition-fast: all 0.2s ease;
+        --transition-normal: all 0.3s ease;
+        --transition-slow: all 0.5s ease-in-out;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.08);
+        --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+        --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+        /* Border Radius */
+        --radius-pill: 50px;
+        --radius-card: 15px;
+        --radius-circle: 50%;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+
+      body {
+        font-family: var(--font-secondary);
+        color: var(--text-dark);
+        line-height: 1.6;
+        background-color: var(--bg-white);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition-normal);
+      }
+
+      button {
+        font-family: inherit;
+        cursor: pointer;
+      }
+
+      /* ==========================================================================
+           2. UTILITY CLASSES
+           ========================================================================== */
+      .container {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+      .text-uppercase {
+        text-transform: uppercase;
+      }
+      .text-green {
+        color: var(--primary-green);
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        padding: 14px 32px;
+        border-radius: var(--radius-pill);
+        font-family: var(--font-primary);
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        border: none;
+        transition: var(--transition-normal);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.1);
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 50%;
+        transition: transform 0.5s ease;
+      }
+
+      .btn:hover::after {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .btn-primary {
+        background-color: var(--primary-green);
+        color: var(--text-light);
+        z-index: 1;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-green-hover);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 95, 83, 0.3);
+      }
+
+      .btn-white {
+        background-color: var(--bg-white);
+        color: var(--primary-green);
+        border: 2px solid var(--primary-green);
+      }
+
+      .btn-white:hover {
+        background-color: var(--primary-green);
+        color: var(--bg-white);
+        transform: translateY(-2px);
+      }
+
+      .btn-menu {
+        background-color: var(--primary-green);
+        color: var(--text-light);
+        padding: 12px 35px;
+        border-radius: var(--radius-pill);
+        font-family: var(--font-primary);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .btn-menu:hover {
+        background-color: var(--primary-green-hover);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-sm {
+        padding: 10px 24px;
+        font-size: 0.75rem;
+      }
+
+      .text-link {
+        color: var(--primary-green);
+        font-family: var(--font-primary);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        border-bottom: 2px solid var(--primary-green);
+        padding-bottom: 3px;
+        display: inline-block;
+      }
+
+      .text-link:hover {
+        color: var(--primary-green-hover);
+        border-color: var(--primary-green-hover);
+        transform: translateX(5px);
+      }
+
+      .section-title {
+        font-family: var(--font-primary);
+        font-size: 2.2rem;
+        font-weight: 800;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--text-dark);
+        margin-bottom: 50px;
+        letter-spacing: 1px;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: var(--primary-green);
+        margin: 15px auto 0;
+        border-radius: 2px;
+      }
+
+      /* ==========================================================================
+           3. HEADER & NAVIGATION
+           ========================================================================== */
+      .site-header {
+        background-color: var(--primary-green);
+        color: var(--text-light);
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: var(--transition-normal);
+      }
+
+      .site-header.scrolled {
+        padding: 10px 0;
+        background-color: rgba(0, 95, 83, 0.98);
+        backdrop-filter: blur(10px);
+      }
+
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+
+      .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-light);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 5px;
+        transition: var(--transition-fast);
+      }
+
+      .mobile-menu-toggle:hover {
+        transform: scale(1.1);
+      }
+
+      .main-nav ul {
+        display: flex;
+        gap: 30px;
+      }
+
+      .main-nav a {
+        font-family: var(--font-primary);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        position: relative;
+        padding-bottom: 5px;
+      }
+
+      .main-nav a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--yellow-banner);
+        transition: var(--transition-normal);
+      }
+
+      .main-nav a:hover::after {
+        width: 100%;
+      }
+
+      .logo {
+        font-family: var(--font-primary);
+        font-size: 2.2rem;
+        font-weight: 800;
+        letter-spacing: 3px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .logo a {
+        color: var(--text-light);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .right-nav {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .sign-in-link {
+        font-family: var(--font-primary);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .sign-in-link:hover {
+        color: var(--yellow-banner);
+      }
+
+      /* ==========================================================================
+           4. HERO SECTION
+           ========================================================================== */
+      .hero-section {
+        background: var(--light-mint-gradient);
+        padding: 100px 0 80px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0) 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-content {
+        max-width: 520px;
+      }
+
+      .hero-title {
+        font-family: var(--font-primary);
+        font-size: 4rem;
+        font-weight: 800;
+        color: var(--primary-green);
+        line-height: 1.05;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        letter-spacing: -1px;
+        text-shadow: 0 2px 10px rgba(0, 95, 83, 0.1);
+      }
+
+      .hero-subtitle {
+        font-size: 1.05rem;
+        color: var(--text-gray);
+        margin-bottom: 35px;
+        line-height: 1.7;
+      }
+
+      /* Hero Carousel */
+      .hero-images {
+        position: relative;
+      }
+
+      .hero-carousel {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .carousel-track-container {
+        overflow: hidden;
+        border-radius: 30px;
+        position: relative;
+        height: 450px;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        height: 100%;
+      }
+
+      .carousel-slide {
+        min-width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 30px;
+        transition: transform 0.5s ease;
+      }
+
+      .carousel-slide:hover img {
+        transform: scale(1.05);
+      }
+
+      .carousel-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        margin-top: 25px;
+      }
+
+      .carousel-button {
+        background: var(--bg-white);
+        border: 1px solid var(--gray-medium);
+        width: 45px;
+        height: 45px;
+        border-radius: var(--radius-circle);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: var(--transition-normal);
+        color: var(--primary-green);
+        font-size: 0.9rem;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .carousel-button:hover {
+        background: var(--primary-green);
+        color: var(--bg-white);
+        border-color: var(--primary-green);
+        transform: scale(1.1);
+      }
+
+      .carousel-indicators {
+        display: flex;
+        gap: 10px;
+      }
+
+      .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: var(--radius-circle);
+        border: 2px solid var(--primary-green);
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        transition: var(--transition-normal);
+      }
+
+      .indicator.current-indicator {
+        background: var(--primary-green);
+        transform: scale(1.2);
+      }
+
+      /* ==========================================================================
+           5. ANNOUNCEMENT BAR
+           ========================================================================== */
+      .announcement-bar {
+        background-color: var(--yellow-banner);
+        text-align: center;
+        padding: 14px 0;
+        font-size: 0.9rem;
+        font-weight: 600;
+        position: relative;
+        z-index: 10;
+      }
+
+      .announcement-bar p {
+        color: var(--text-dark);
+      }
+
+      .announcement-bar a {
+        color: var(--primary-green);
+        text-decoration: underline;
+        margin-left: 5px;
+        font-weight: 700;
+      }
+
+      .announcement-bar a:hover {
+        color: var(--text-dark);
+      }
+
+      /* ==========================================================================
+           6. MENU SECTION
+           ========================================================================== */
+      .menu-section {
+        padding: 100px 20px;
+        text-align: center;
+        background-color: var(--bg-white);
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        max-width: 1000px;
+        margin: 0 auto 50px;
+      }
+
+      .menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        transition: var(--transition-normal);
+      }
+
+      .menu-item:hover {
+        transform: translateY(-10px);
+      }
+
+      .menu-image-wrapper {
+        width: 260px;
+        height: 260px;
+        border-radius: var(--radius-circle);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition-normal);
+        border: 5px solid var(--bg-white);
+        position: relative;
+      }
+
+      .menu-image-wrapper::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius-circle);
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+        pointer-events: none;
+      }
+
+      .menu-item:hover .menu-image-wrapper {
+        box-shadow: var(--shadow-hover);
+        transform: scale(1.05);
+      }
+
+      .menu-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .menu-item:hover .menu-image-wrapper img {
+        transform: scale(1.1);
+      }
+
+      /* ==========================================================================
+           7. REWARDS SECTION (Added for bulk)
+           ========================================================================== */
+      .rewards-section {
+        background-color: var(--primary-green);
+        color: var(--text-light);
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .rewards-section::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0) 70%
+        );
+        border-radius: 50%;
+      }
+
+      .rewards-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .rewards-content h2 {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .rewards-content p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+      }
+
+      .rewards-content .btn-white {
+        background: transparent;
+        color: var(--text-light);
+        border-color: var(--text-light);
+      }
+
+      .rewards-content .btn-white:hover {
+        background: var(--text-light);
+        color: var(--primary-green);
+      }
+
+      /* ==========================================================================
+           8. PROMO SECTION (Winter Menu)
+           ========================================================================== */
+      .promo-section {
+        padding: 100px 0;
+        background-color: var(--bg-off-white);
+        border-top: 1px solid var(--gray-border);
+        overflow: hidden;
+      }
+
+      .promo-inner {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 70px;
+        align-items: center;
+      }
+
+      .promo-text-content {
+        max-width: 420px;
+      }
+
+      .winter-badge {
+        width: 140px;
+        height: 140px;
+        border-radius: var(--radius-circle);
+        border: 3px solid var(--primary-green);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 35px;
+        text-align: center;
+        font-family: var(--font-primary);
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: var(--primary-green);
+        text-transform: uppercase;
+        line-height: 1.2;
+        position: relative;
+        background: var(--bg-white);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .winter-badge::before {
+        content: "";
+        position: absolute;
+        inset: -8px;
+        border-radius: var(--radius-circle);
+        border: 1px dashed var(--primary-green);
+        opacity: 0.5;
+        animation: spin 20s linear infinite;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .promo-subtitle {
+        font-family: var(--font-primary);
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: var(--primary-green);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      .promo-title {
+        font-family: var(--font-primary);
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--text-dark);
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin-bottom: 25px;
+      }
+
+      .promo-description {
+        font-size: 1rem;
+        margin-bottom: 35px;
+        color: var(--text-gray);
+        line-height: 1.7;
+      }
+
+      /* Promo Carousel */
+      .promo-carousel-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        position: relative;
+      }
+
+      .promo-nav {
+        background: var(--bg-white);
+        border: 1px solid var(--gray-medium);
+        width: 50px;
+        height: 50px;
+        border-radius: var(--radius-circle);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: var(--transition-normal);
+        flex-shrink: 0;
+        box-shadow: var(--shadow-sm);
+        color: var(--text-dark);
+      }
+
+      .promo-nav:hover {
+        background: var(--primary-green);
+        color: var(--bg-white);
+        border-color: var(--primary-green);
+        transform: scale(1.1);
+      }
+
+      .promo-nav:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .promo-carousel {
+        overflow: hidden;
+        flex-grow: 1;
+      }
+
+      .promo-track-container {
+        overflow: hidden;
+        padding: 10px 0;
+      }
+
+      .promo-track {
+        display: flex;
+        gap: 25px;
+        transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      .promo-card {
+        min-width: calc(50% - 12.5px);
+        background: var(--bg-white);
+        border-radius: var(--radius-card);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition-normal);
+        border: 1px solid var(--gray-border);
+      }
+
+      .promo-card:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-5px);
+      }
+
+      .promo-card-image {
+        height: 240px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .promo-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .promo-card:hover .promo-card-image img {
+        transform: scale(1.05);
+      }
+
+      .promo-card-content {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .promo-card-content h4 {
+        font-family: var(--font-primary);
+        font-size: 1.3rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        color: var(--text-dark);
+      }
+
+      .promo-card-content h5 {
+        font-family: var(--font-primary);
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--primary-green);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+      }
+
+      .promo-card-content p {
+        font-size: 0.95rem;
+        color: var(--text-gray);
+        margin-bottom: 25px;
+        flex-grow: 1;
+        line-height: 1.6;
+      }
+
+      /* ==========================================================================
+           9. FOOTER
+           ========================================================================== */
+      .site-footer {
+        background-color: #111111;
+        color: var(--text-light);
+        padding: 60px 0 30px;
+        font-size: 0.9rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+
+      .footer-brand h3 {
+        font-family: var(--font-primary);
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+
+      .footer-brand p {
+        color: var(--text-gray-light);
+        max-width: 300px;
+        line-height: 1.7;
+      }
+
+      .footer-links-col h4 {
+        font-family: var(--font-primary);
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+      }
+
+      .footer-links-col ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .footer-links-col a {
+        color: var(--text-gray-light);
+      }
+
+      .footer-links-col a:hover {
+        color: var(--text-light);
+        padding-left: 5px;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #333333;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--text-gray-light);
+        font-size: 0.85rem;
+      }
+
+      .footer-bottom-links {
+        display: flex;
+        gap: 25px;
+      }
+
+      .footer-bottom-links a:hover {
+        color: var(--text-light);
+      }
+
+      /* ==========================================================================
+           10. RESPONSIVE DESIGN (MEDIA QUERIES)
+           ========================================================================== */
+
+      /* Tablet & Small Desktop (max-width: 1024px) */
+      @media (max-width: 1024px) {
+        .hero-title {
+          font-size: 3.2rem;
+        }
+
+        .promo-inner {
+          grid-template-columns: 1fr;
+          gap: 50px;
+        }
+
+        .promo-text-content {
+          max-width: 100%;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .promo-card {
+          min-width: calc(100% - 12.5px);
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* Mobile Landscape & Tablet (max-width: 768px) */
+      @media (max-width: 768px) {
+        .mobile-menu-toggle {
+          display: block;
+        }
+
+        .main-nav {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: var(--primary-green);
+          padding: 25px 0;
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .main-nav.active {
+          display: block;
+          animation: slideDown 0.3s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .main-nav ul {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .logo {
+          position: static;
+          transform: none;
+          font-size: 1.6rem;
+        }
+
+        .right-nav .sign-in-link {
+          display: none;
+        }
+
+        .right-nav .btn-white {
+          padding: 10px 20px;
+          font-size: 0.8rem;
+        }
+
+        .hero-inner {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-content {
+          max-width: 100%;
+          margin: 0 auto;
+        }
+
+        .hero-title {
+          font-size: 2.8rem;
+        }
+
+        .carousel-nav {
+          justify-content: center;
+        }
+
+        .carousel-track-container {
+          height: 350px;
+        }
+
+        .menu-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .menu-image-wrapper {
+          width: 220px;
+          height: 220px;
+        }
+
+        .promo-carousel-wrapper {
+          flex-direction: column;
+        }
+
+        .promo-nav {
+          display: none;
+        }
+
+        .promo-track {
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          padding-bottom: 25px;
+          gap: 15px;
+        }
+
+        .promo-card {
+          min-width: 85%;
+          scroll-snap-align: center;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .footer-brand p {
+          max-width: 100%;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+        }
+      }
+
+      /* Small Mobile (max-width: 480px) */
+      @media (max-width: 480px) {
+        .hero-section {
+          padding: 60px 0;
+        }
+
+        .hero-title {
+          font-size: 2.2rem;
+        }
+
+        .hero-subtitle {
+          font-size: 0.95rem;
+        }
+
+        .carousel-track-container {
+          height: 280px;
+        }
+
+        .section-title {
+          font-size: 1.6rem;
+        }
+
+        .promo-title {
+          font-size: 2.2rem;
+        }
+
+        .promo-card-content {
+          padding: 20px;
+        }
+
+        .btn {
+          padding: 12px 24px;
+          font-size: 0.8rem;
+        }
+
+        .winter-badge {
+          width: 110px;
+          height: 110px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ==========================================================================
+         HEADER & NAVIGATION
+         ========================================================================== -->
+    <header class="site-header" id="site-header">
+      <div class="header-inner container">
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="mobile-menu-toggle"
+          id="mobile-menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Left Navigation -->
+        <nav class="main-nav" id="main-nav">
+          <ul>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#catering">Catering</a></li>
+            <li><a href="#rewards">Rewards</a></li>
+          </ul>
+        </nav>
+
+        <!-- Center Logo -->
+        <div class="logo">
+          <a href="#" aria-label="Chopt Home">CHOPT</a>
+        </div>
+
+        <!-- Right Navigation -->
+        <div class="right-nav">
+          <a href="#" class="sign-in-link"
+            ><i class="fa-regular fa-user"></i> Sign In</a
+          >
+          <a href="#" class="btn btn-white">Order Now</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-inner container">
+        <div class="hero-content">
+          <h1 class="hero-title">Chopt's<br />Greatest Hits</h1>
+          <p class="hero-subtitle">
+            You asked, we listened. The Spicy Sonoma Caesar, Lemon Crush Bowl &
+            Ultimate Hummus Bowl are officially back on the menu—for good.
+          </p>
+          <a href="#menu" class="btn btn-primary">Order Now</a>
+        </div>
+
+        <div class="hero-images">
+          <div class="hero-carousel" id="hero-carousel">
+            <div class="carousel-track-container">
+              <ul class="carousel-track">
+                <li class="carousel-slide current-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop"
+                    alt="Fresh Salad Bowl"
+                  />
+                </li>
+                <li class="carousel-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=800&auto=format&fit=crop"
+                    alt="Warm Bowl"
+                  />
+                </li>
+                <li class="carousel-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop"
+                    alt="Wrap"
+                  />
+                </li>
+              </ul>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="carousel-nav">
+              <button class="carousel-button prev" aria-label="Previous slide">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <div class="carousel-indicators">
+                <button
+                  class="indicator current-indicator"
+                  data-slide="0"
+                  aria-label="Go to slide 1"
+                ></button>
+                <button
+                  class="indicator"
+                  data-slide="1"
+                  aria-label="Go to slide 2"
+                ></button>
+                <button
+                  class="indicator"
+                  data-slide="2"
+                  aria-label="Go to slide 3"
+                ></button>
+              </div>
+              <button class="carousel-button next" aria-label="Next slide">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button
+                class="carousel-button play-pause"
+                aria-label="Play/Pause"
+              >
+                <i class="fa-solid fa-pause"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ANNOUNCEMENT BAR
+         ========================================================================== -->
+    <div class="announcement-bar">
+      <p>
+        The Chopt Greatest Hits Are Back by Popular Demand!
+        <a href="#">Order Now</a>
+      </p>
+    </div>
+
+    <!-- ==========================================================================
+         EXPLORE MENU SECTION
+         ========================================================================== -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <h2 class="section-title">Explore Our Menu</h2>
+
+        <div class="menu-grid">
+          <!-- Salads -->
+          <div class="menu-item">
+            <div class="menu-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=400&auto=format&fit=crop"
+                alt="Salads"
+              />
+            </div>
+            <a href="#" class="btn btn-menu">Salads</a>
+          </div>
+
+          <!-- Wraps -->
+          <div class="menu-item">
+            <div class="menu-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=400&auto=format&fit=crop"
+                alt="Wraps"
+              />
+            </div>
+            <a href="#" class="btn btn-menu">Wraps</a>
+          </div>
+
+          <!-- Warm Bowls -->
+          <div class="menu-item">
+            <div class="menu-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"
+                alt="Warm Bowls"
+              />
+            </div>
+            <a href="#" class="btn btn-menu">Warm Bowls</a>
+          </div>
+        </div>
+
+        <div class="menu-cta">
+          <a href="#" class="text-link">View Full Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         REWARDS SECTION (Added for bulk/functionality)
+         ========================================================================== -->
+    <section class="rewards-section" id="rewards">
+      <div class="container rewards-content">
+        <h2>Join Chopt Rewards</h2>
+        <p>
+          Earn points on every order, get exclusive access to new menu items,
+          and receive a special birthday treat. It pays to be a regular.
+        </p>
+        <a href="#" class="btn btn-white">Sign Up Today</a>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WINTER MENU PROMO SECTION
+         ========================================================================== -->
+    <section class="promo-section" id="catering">
+      <div class="promo-inner container">
+        <!-- Left Content -->
+        <div class="promo-text-content">
+          <div class="winter-badge">
+            <span>Winter<br />Menu</span>
+          </div>
+          <h3 class="promo-subtitle">It's Chile Season</h3>
+          <h2 class="promo-title">Taste The Winter<br />Menu</h2>
+          <p class="promo-description">
+            We've teamed up with Zia Hatch Chile Company to create a
+            limited-time menu inspired by the vibrant flavors of Hatch Valley,
+            New Mexico.
+          </p>
+          <a href="#" class="btn btn-primary">Let's Go</a>
+        </div>
+
+        <!-- Right Carousel -->
+        <div class="promo-carousel-wrapper">
+          <button
+            class="promo-nav prev"
+            id="promo-prev"
+            aria-label="Previous promo"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+
+          <div class="promo-carousel" id="promo-carousel">
+            <div class="promo-track-container">
+              <ul class="promo-track" id="promo-track">
+                <li class="promo-card">
+                  <div class="promo-card-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=600&auto=format&fit=crop"
+                      alt="Hatch Chile Caesar Salad"
+                    />
+                  </div>
+                  <div class="promo-card-content">
+                    <h4>Hatch Chile Caesar Salad</h4>
+                    <h5>A Caesar from the Southwest</h5>
+                    <p>
+                      Each bite bursts with the classic, creamy Caesar taste you
+                      love, elevated by a smoky twist inspired by New Mexico's
+                      Hatch Valley.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+                  </div>
+                </li>
+
+                <li class="promo-card">
+                  <div class="promo-card-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop"
+                      alt="Tinga Hatch Bowl"
+                    />
+                  </div>
+                  <div class="promo-card-content">
+                    <h4>Tinga Hatch Bowl</h4>
+                    <h5>Turn Up The Heat</h5>
+                    <p>
+                      Our new bowl is packed with tender chicken tinga, crisp
+                      veggies and a zesty kick from our new Zia Chile dressing.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+                  </div>
+                </li>
+
+                <li class="promo-card">
+                  <div class="promo-card-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=600&auto=format&fit=crop"
+                      alt="Southwest Wrap"
+                    />
+                  </div>
+                  <div class="promo-card-content">
+                    <h4>Southwest Wrap</h4>
+                    <h5>Fresh & Filling</h5>
+                    <p>
+                      All the flavors of the Southwest wrapped in a soft
+                      tortilla. Perfect for a quick and satisfying lunch on the
+                      go.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Order Now</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button
+            class="promo-nav next"
+            id="promo-next"
+            aria-label="Next promo"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="site-footer" id="locations">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>CHOPT</h3>
+            <p>
+              Creative Salad Co. Making healthy food exciting, delicious, and
+              accessible to everyone since 2001.
+            </p>
+          </div>
+          <div class="footer-links-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#">Our Menu</a></li>
+              <li><a href="#">Locations</a></li>
+              <li><a href="#">Catering</a></li>
+              <li><a href="#">Rewards</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Sustainability</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Gift Cards</a></li>
+              <li><a href="#">Accessibility</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Chopt Creative Salad Co. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Settings</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================================================
+         JAVASCRIPT LOGIC
+         ========================================================================== -->
+    <script>
+      /**
+       * Main Application Entry Point
+       * Wraps all functionality in a DOMContentLoaded event listener to ensure
+       * the DOM is fully loaded before manipulation.
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        // ==================================================================
+        // 1. GLOBAL STATE & CACHED DOM ELEMENTS
+        // ==================================================================
+        const state = {
+          heroCarouselIndex: 0,
+          promoCarouselIndex: 0,
+          isHeroAutoPlaying: true,
+          heroInterval: null,
+        };
+
+        const DOM = {
+          header: document.getElementById("site-header"),
+          mobileToggle: document.getElementById("mobile-menu-toggle"),
+          mainNav: document.getElementById("main-nav"),
+          heroCarousel: document.getElementById("hero-carousel"),
+          promoCarousel: document.getElementById("promo-carousel"),
+          promoPrev: document.getElementById("promo-prev"),
+          promoNext: document.getElementById("promo-next"),
+        };
+
+        // ==================================================================
+        // 2. UTILITY FUNCTIONS
+        // ==================================================================
+
+        /**
+         * Debounce function to limit the rate at which a function can fire.
+         * Useful for resize events.
+         */
+        function debounce(func, wait = 20, immediate = true) {
+          let timeout;
+          return function () {
+            const context = this,
+              args = arguments;
+            const later = function () {
+              timeout = null;
+              if (!immediate) func.apply(context, args);
+            };
+            const callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+          };
+        }
+
+        // ==================================================================
+        // 3. HEADER & MOBILE NAVIGATION LOGIC
+        // ==================================================================
+        class HeaderController {
+          constructor(headerElement, toggleElement, navElement) {
+            this.header = headerElement;
+            this.toggle = toggleElement;
+            this.nav = navElement;
+            this.init();
+          }
+
+          init() {
+            this.bindEvents();
+            this.handleScroll(); // Check initial state
+          }
+
+          bindEvents() {
+            // Mobile Menu Toggle
+            if (this.toggle) {
+              this.toggle.addEventListener("click", () =>
+                this.toggleMobileMenu(),
+              );
+            }
+
+            // Scroll effect for header
+            window.addEventListener(
+              "scroll",
+              debounce(() => this.handleScroll(), 10),
+            );
+          }
+
+          toggleMobileMenu() {
+            const isActive = this.nav.classList.contains("active");
+            this.nav.classList.toggle("active");
+            this.toggle.setAttribute("aria-expanded", !isActive);
+
+            const icon = this.toggle.querySelector("i");
+            if (isActive) {
+              icon.classList.remove("fa-times");
+              icon.classList.add("fa-bars");
+            } else {
+              icon.classList.remove("fa-bars");
+              icon.classList.add("fa-times");
+            }
+          }
+
+          handleScroll() {
+            if (window.scrollY > 50) {
+              this.header.classList.add("scrolled");
+            } else {
+              this.header.classList.remove("scrolled");
+            }
+          }
+        }
+
+        // Initialize Header
+        if (DOM.header && DOM.mobileToggle && DOM.mainNav) {
+          new HeaderController(DOM.header, DOM.mobileToggle, DOM.mainNav);
+        }
+
+        // ==================================================================
+        // 4. HERO CAROUSEL LOGIC
+        // ==================================================================
+        class HeroCarousel {
+          constructor(carouselElement) {
+            this.carousel = carouselElement;
+            this.track = this.carousel.querySelector(".carousel-track");
+            this.slides = Array.from(this.track.children);
+            this.nextButton = this.carousel.querySelector(".next");
+            this.prevButton = this.carousel.querySelector(".prev");
+            this.indicators = Array.from(
+              this.carousel.querySelectorAll(".indicator"),
+            );
+            this.playPauseBtn = this.carousel.querySelector(".play-pause");
+
+            this.currentIndex = 0;
+            this.slideWidth = this.slides[0].getBoundingClientRect().width;
+            this.isPlaying = true;
+            this.autoPlayInterval = null;
+            this.autoPlayDuration = 5000;
+
+            this.init();
+          }
+
+          init() {
+            this.updateSlidePosition();
+            this.addEventListeners();
+            this.startAutoPlay();
+
+            // Handle window resize
+            window.addEventListener(
+              "resize",
+              debounce(() => this.handleResize(), 150),
+            );
+          }
+
+          addEventListeners() {
+            if (this.nextButton) {
+              this.nextButton.addEventListener("click", () => {
+                this.goToNextSlide();
+                this.resetAutoPlay();
+              });
+            }
+
+            if (this.prevButton) {
+              this.prevButton.addEventListener("click", () => {
+                this.goToPrevSlide();
+                this.resetAutoPlay();
+              });
+            }
+
+            this.indicators.forEach((indicator, index) => {
+              indicator.addEventListener("click", () => {
+                this.goToSlide(index);
+                this.resetAutoPlay();
+              });
+            });
+
+            if (this.playPauseBtn) {
+              this.playPauseBtn.addEventListener("click", () =>
+                this.togglePlayPause(),
+              );
+            }
+          }
+
+          updateSlidePosition() {
+            this.track.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+            this.updateIndicators();
+          }
+
+          updateIndicators() {
+            this.indicators.forEach((indicator, index) => {
+              indicator.classList.toggle(
+                "current-indicator",
+                index === this.currentIndex,
+              );
+            });
+          }
+
+          goToSlide(index) {
+            this.currentIndex = index;
+            this.updateSlidePosition();
+          }
+
+          goToNextSlide() {
+            this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+            this.updateSlidePosition();
+          }
+
+          goToPrevSlide() {
+            this.currentIndex =
+              (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+            this.updateSlidePosition();
+          }
+
+          startAutoPlay() {
+            if (this.isPlaying) {
+              this.autoPlayInterval = setInterval(
+                () => this.goToNextSlide(),
+                this.autoPlayDuration,
+              );
+              this.updatePlayPauseIcon("pause");
+            }
+          }
+
+          stopAutoPlay() {
+            clearInterval(this.autoPlayInterval);
+            this.updatePlayPauseIcon("play");
+          }
+
+          resetAutoPlay() {
+            this.stopAutoPlay();
+            this.isPlaying = true;
+            this.startAutoPlay();
+          }
+
+          togglePlayPause() {
+            this.isPlaying = !this.isPlaying;
+            if (this.isPlaying) {
+              this.startAutoPlay();
+            } else {
+              this.stopAutoPlay();
+            }
+          }
+
+          updatePlayPauseIcon(state) {
+            if (!this.playPauseBtn) return;
+            const icon = this.playPauseBtn.querySelector("i");
+            if (state === "pause") {
+              icon.classList.remove("fa-play");
+              icon.classList.add("fa-pause");
+            } else {
+              icon.classList.remove("fa-pause");
+              icon.classList.add("fa-play");
+            }
+          }
+
+          handleResize() {
+            this.slideWidth = this.slides[0].getBoundingClientRect().width;
+            this.updateSlidePosition();
+          }
+        }
+
+        // Initialize Hero Carousel
+        if (DOM.heroCarousel) {
+          new HeroCarousel(DOM.heroCarousel);
+        }
+
+        // ==================================================================
+        // 5. PROMO CAROUSEL LOGIC (Winter Menu)
+        // ==================================================================
+        class PromoCarousel {
+          constructor(carouselElement, prevBtn, nextBtn) {
+            this.carousel = carouselElement;
+            this.track = this.carousel.querySelector(".promo-track");
+            this.cards = Array.from(this.track.children);
+            this.prevBtn = prevBtn;
+            this.nextBtn = nextBtn;
+
+            this.currentIndex = 0;
+            this.cardsToShow = window.innerWidth > 1024 ? 2 : 1;
+            this.totalSlides = Math.max(
+              1,
+              this.cards.length - this.cardsToShow + 1,
+            );
+            this.cardWidth = 0;
+            this.gap = 25; // Matches CSS gap
+
+            this.init();
+          }
+
+          init() {
+            this.calculateDimensions();
+            this.updateSlidePosition();
+            this.addEventListeners();
+
+            window.addEventListener(
+              "resize",
+              debounce(() => {
+                this.calculateDimensions();
+                this.handleResize();
+              }, 150),
+            );
+          }
+
+          calculateDimensions() {
+            if (this.cards.length > 0) {
+              this.cardWidth = this.cards[0].getBoundingClientRect().width;
+            }
+          }
+
+          addEventListeners() {
+            if (this.nextBtn) {
+              this.nextBtn.addEventListener("click", () => {
+                if (this.currentIndex < this.totalSlides - 1) {
+                  this.currentIndex++;
+                  this.updateSlidePosition();
+                }
+              });
+            }
+
+            if (this.prevBtn) {
+              this.prevBtn.addEventListener("click", () => {
+                if (this.currentIndex > 0) {
+                  this.currentIndex--;
+                  this.updateSlidePosition();
+                }
+              });
+            }
+          }
+
+          updateSlidePosition() {
+            const moveAmount = (this.cardWidth + this.gap) * this.currentIndex;
+            this.track.style.transform = `translateX(-${moveAmount}px)`;
+            this.updateButtons();
+          }
+
+          updateButtons() {
+            if (this.prevBtn) {
+              this.prevBtn.disabled = this.currentIndex === 0;
+            }
+            if (this.nextBtn) {
+              this.nextBtn.disabled = this.currentIndex >= this.totalSlides - 1;
+            }
+          }
+
+          handleResize() {
+            this.cardsToShow = window.innerWidth > 1024 ? 2 : 1;
+            this.totalSlides = Math.max(
+              1,
+              this.cards.length - this.cardsToShow + 1,
+            );
+            this.currentIndex = 0; // Reset on resize
+            this.updateSlidePosition();
+          }
+        }
+
+        // Initialize Promo Carousel
+        if (DOM.promoCarousel && DOM.promoPrev && DOM.promoNext) {
+          new PromoCarousel(DOM.promoCarousel, DOM.promoPrev, DOM.promoNext);
+        }
+
+        // ==================================================================
+        // 6. SMOOTH SCROLL FOR ANCHOR LINKS
+        // ==================================================================
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+
+              // Close mobile menu if open
+              if (DOM.mainNav && DOM.mainNav.classList.contains("active")) {
+                DOM.mobileToggle.click();
+              }
+
+              const headerOffset = 80;
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // ==================================================================
+        // 7. SIMULATED API LOGGING (For demonstration/bulk)
+        // ==================================================================
+        const mockApiData = [
+          {
+            id: 1,
+            name: "Spicy Sonoma Caesar",
+            category: "Salads",
+            price: 12.99,
+          },
+          {
+            id: 2,
+            name: "Lemon Crush Bowl",
+            category: "Warm Bowls",
+            price: 13.49,
+          },
+          {
+            id: 3,
+            name: "Ultimate Hummus Bowl",
+            category: "Warm Bowls",
+            price: 11.99,
+          },
+          {
+            id: 4,
+            name: "Hatch Chile Caesar",
+            category: "Salads",
+            price: 13.99,
+          },
+          {
+            id: 5,
+            name: "Tinga Hatch Bowl",
+            category: "Warm Bowls",
+            price: 14.49,
+          },
+        ];
+
+        console.log(
+          "%c Chopt App Initialized ",
+          "background: #005f53; color: #fff; font-size: 14px; font-weight: bold; padding: 5px;",
+        );
+        console.log("Mock Menu Data Loaded:", mockApiData);
+
+        // Simulate a network request for user data
+        function fetchUserData() {
+          return new Promise((resolve) => {
+            setTimeout(() => {
+              resolve({
+                name: "Guest User",
+                rewardsPoints: 450,
+                tier: "Gold",
+              });
+            }, 1000);
+          });
+        }
+
+        fetchUserData().then((user) => {
+          console.log(
+            `Welcome back, ${user.name}! You have ${user.rewardsPoints} points.`,
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
